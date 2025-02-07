@@ -1,5 +1,6 @@
 import Profile from "../../pages/profile/Profile";
-import "./post.scss"
+import "./posts.scss"
+import Post from "../post/Post";
 
 const Posts=() =>{
 
@@ -39,10 +40,12 @@ const Posts=() =>{
     ];
 
     return <div className="posts">
-      {posts.map(post=>(
-          <Post post ={post} key={post.id} />
-      ))}
-      </div>;
+      {
+        posts.map(post=>(
+          <Post post ={post} key={post.id}/>
+        ))
+      }
+    </div>
     
 };
 
